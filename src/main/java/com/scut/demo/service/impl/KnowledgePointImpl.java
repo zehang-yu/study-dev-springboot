@@ -1,7 +1,8 @@
 package com.scut.demo.service.impl;
 
-import com.scut.demo.mapper.KnowledgePointMapper;
+import com.scut.demo.dto.ChapterDto;
 import com.scut.demo.entity.KnowledgePoint;
+import com.scut.demo.mapper.KnowledgePointMapper;
 import com.scut.demo.service.KnowledgePointService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,13 @@ public class KnowledgePointImpl implements KnowledgePointService {
     }
 
     @Override
-    public List<KnowledgePoint> queryKnowledgePointByChapter(String chapter) {
-        return knowledgePointDao.queryKnowledgePointByChapter(chapter);
+    public ChapterDto queryKnowledgePointByChapter(String chapter) {
+        List<KnowledgePoint> list = knowledgePointDao.queryKnowledgePointByChapter(chapter);
+        if (list.isEmpty()) {
+            return null;
+        }
+        ChapterDto chapterDto = new ChapterDto(list);
+        System.out.println(chapterDto);
+        return chapterDto;
     }
 }
