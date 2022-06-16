@@ -13,6 +13,11 @@ public class TestInfoImpl implements TestInfoService {
     private TestInfoMapper testInfoMapper;
 
     @Override
+    public void insertChoiceQuestion(TestInfo testInfo){
+        testInfoMapper.insertChoiceQuestion(testInfo);
+    }
+
+    @Override
     public TestInfo getQuestionTextById(int id) {
         return testInfoMapper.getQuestionTextById(id);
     }

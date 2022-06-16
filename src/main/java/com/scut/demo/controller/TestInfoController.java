@@ -6,10 +6,7 @@ import com.scut.demo.service.TestInfoService;
 import com.scut.demo.utils.Result;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/test")
@@ -25,4 +22,10 @@ public class TestInfoController {
        return Result.ok().put("testInfo",testInfo);
     }
 
+    // axios base URL /test/getQuestion/
+    @GetMapping("/insertChoiceQuestion")
+    public Result insertChoiceQuestion(@RequestBody TestInfo testInfo){
+        testInfoService.insertChoiceQuestion(testInfo);
+        return Result.ok().put("插入成功",testInfo);
+    }
 }

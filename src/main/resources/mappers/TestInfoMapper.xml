@@ -3,17 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scut.demo.mapper.TestInfoMapper">
-    <insert id="insertKnowledgePoint" parameterType="com.scut.demo.entity.KnowledgePoint">
-        insert into knowledgepoint(content, `section`, chapter) values (#{content}, #{section}, #{chapter})
+
+    <insert id="insertChoiceQuestion" parameterType="com.scut.demo.entity.TestInfo">
+        insert into choicequestion(choice_queid, title,ans,op_A,op_B,op_C,op_D) values (#{id}, #{name},#{correct}, #{op_A},#{op_B},#{op_C},#{op_D})
     </insert>
-
-    <update id="updateKnowledgePointById" parameterType="com.scut.demo.entity.KnowledgePoint">
-        update knowledgepoint set chapter=#{chapter}, `section`=#{section}, content=#{content} where id=#{id}
-    </update>
-
-    <delete id="deleteKnowledgePointById">
-        delete from knowledgepoint where id=#{id}
-    </delete>
 
     <select id="getQuestionTextById" resultType="com.scut.demo.entity.TestInfo">
         select * from test where test_id=#{id}

@@ -1,5 +1,6 @@
 package com.scut.demo.entity;
 
+/* 这里表示选择题, 因为懒得改名字了......*/
 public class TestInfo {
     int ID;
     String name;//题目的文本
@@ -12,7 +13,7 @@ public class TestInfo {
     public TestInfo() {
     }
 
-    public TestInfo(int ID, String name, String type, String op_A, String op_B, String op_C, String op_D, String correct) {
+    public TestInfo(int ID, String name, String op_A, String op_B, String op_C, String op_D, String correct) {
         this.ID = ID;
         this.name = name;
         this.op_A = op_A;

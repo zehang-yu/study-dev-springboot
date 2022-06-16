@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface TestInfoMapper {
+    //增加选择题
+    void insertChoiceQuestion(TestInfo testInfo);
+
     //获取问题文本
     TestInfo getQuestionTextById(int id);
     //获取选项文本
