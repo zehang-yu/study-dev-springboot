@@ -54,13 +54,13 @@ class SectionDto {
     private List<ContentDto> children; // 知识点名字
 
     public void add(KnowledgePoint k) {
-        this.children.add(new ContentDto(k.getContent()));
+        this.children.add(new ContentDto(k));
     }
 
     public SectionDto(KnowledgePoint k) {
         this.label = k.getSection();
         this.children = new ArrayList<>();
-        this.children.add(new ContentDto(k.getContent()));
+        this.children.add(new ContentDto(k));
     }
 
     public String getLabel() {
@@ -81,13 +81,15 @@ class SectionDto {
 }
 
 class ContentDto {
+    private int id;
     private String label;
 
     public ContentDto() {
     }
 
-    public ContentDto(String content) {
-        this.label = content;
+    public ContentDto(KnowledgePoint k) {
+        this.id = k.getId();
+        this.label = k.getContent();
     }
 
     public String getLabel() {
@@ -96,5 +98,13 @@ class ContentDto {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
