@@ -8,11 +8,11 @@
     </insert>
 
     <update id="updateKnowledgePointById" parameterType="com.scut.demo.entity.KnowledgePoint">
-        update knowledgepoint set chapter=#{chapter}, `section`=#{section}, content=#{content} where id=#{id}
+        update knowledgepoint set chapter=#{chapter}, `section`=#{section}, content=#{content} where kp_id=#{id}
     </update>
 
     <delete id="deleteKnowledgePointById">
-        delete from knowledgepoint where id=#{id}
+        delete from knowledgepoint where kp_id=#{id}
     </delete>
 
     <select id="queryKnowledgePointByChapter" resultType="com.scut.demo.entity.KnowledgePoint">
