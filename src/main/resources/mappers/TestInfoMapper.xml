@@ -14,6 +14,7 @@
     </resultMap>
     <insert id="insertKnowledgePoint" parameterType="com.scut.demo.entity.KnowledgePoint">
         insert into knowledgepoint(content, `section`, chapter) values (#{content}, #{section}, #{chapter})
+    </insert>
 
     <insert id="insertChoiceQuestion" parameterType="com.scut.demo.entity.TestInfo">
         insert into choicequestion(choice_queid, title,ans,op_A,op_B,op_C,op_D) values (#{id}, #{name},#{correct}, #{op_A},#{op_B},#{op_C},#{op_D})
