@@ -1,74 +1,84 @@
 package com.scut.demo.entity;
 
+import org.springframework.beans.factory.annotation.Configurable;
+
 /* 这里表示选择题, 因为懒得改名字了......*/
 public class TestInfo {
-    int ID;
+    int testId;
+    String testName;//题目的文本
+    String opA;//选项文本
+    String opB;
+    String opC;
+    String opD;
+    String correct;//正确选项
+
+/*    int testId;
     String name;//题目的文本
     String op_A;//选项文本
     String op_B;
     String op_C;
     String op_D;
-    String correct;//正确选项
+    String correct;//正确选项*/
 
     public TestInfo() {
     }
 
-    public TestInfo(int ID, String name, String op_A, String op_B, String op_C, String op_D, String correct) {
-        this.ID = ID;
-        this.name = name;
-        this.op_A = op_A;
-        this.op_B = op_B;
-        this.op_C = op_C;
-        this.op_D = op_D;
+    public TestInfo(int id, String testName, String op_A, String op_B, String op_C, String op_D, String correct) {
+        this.testId = id;
+        this.testName = testName;
+        this.opA = op_A;
+        this.opB = op_B;
+        this.opC = op_C;
+        this.opD = op_D;
         this.correct = correct;
     }
 
-    public int getID() {
-        return ID;
+    public int getTestId() {
+        return testId;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setTestId(int testId) {
+        this.testId = testId;
     }
 
-    public String getName() {
-        return name;
+    public String getTestName() {
+        return testName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTestName(String testName) {
+        this.testName = testName;
     }
 
-    public String getOp_A() {
-        return op_A;
+    public String getOpA() {
+        return opA;
     }
 
-    public void setOp_A(String op_A) {
-        this.op_A = op_A;
+    public void setOpA(String opA) {
+        this.opA = opA;
     }
 
-    public String getOp_B() {
-        return op_B;
+    public String getOpB() {
+        return opB;
     }
 
-    public void setOp_B(String op_B) {
-        this.op_B = op_B;
+    public void setOpB(String opB) {
+        this.opB = opB;
     }
 
-    public String getOp_C() {
-        return op_C;
+    public String getOpC() {
+        return opC;
     }
 
-    public void setOp_C(String op_C) {
-        this.op_C = op_C;
+    public void setOpC(String opC) {
+        this.opC = opC;
     }
 
-    public String getOp_D() {
-        return op_D;
+    public String getOpD() {
+        return opD;
     }
 
-    public void setOp_D(String op_D) {
-        this.op_D = op_D;
+    public void setOpD(String opD) {
+        this.opD = opD;
     }
 
     public String getCorrect() {
@@ -78,6 +88,4 @@ public class TestInfo {
     public void setCorrect(String correct) {
         this.correct = correct;
     }
-
-
 }
