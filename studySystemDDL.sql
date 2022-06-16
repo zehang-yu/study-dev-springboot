@@ -4,7 +4,7 @@ use studysystem;
 
 
 create table knowledgepoint
-	(kp_id			int auto_increment,
+	(kp_id			int auto_increment not null,
 	 content		varchar(255) not null,
 	 chapter		varchar(32),
 	 section		varchar(32),
@@ -13,36 +13,36 @@ create table knowledgepoint
 
 /* 问题父表 */
 create table question
-	(que_id int auto_increment,
- 	 title 				varchar(255),
-	 ans 					varchar(8),	 
+	(que_id 		int auto_increment not null,
+ 	 title 			varchar(255),
+	 ans 			varchar(8),	 
 	 primary key (que_id)
 	);
 
 /* 选择题 */
 create table choicequestion
 	(choice_queid int,
- 	 title 				varchar(255),
-	 ans 					varchar(8),	 
-	 op_A					varchar(255),
-	 op_B					varchar(255),
-	 op_D					varchar(255),
-	 op_4					varchar(255),
+ 	 title 			varchar(255),
+	 ans 			varchar(8),	 
+	 op_A			varchar(255),
+	 op_B			varchar(255),
+	 op_C			varchar(255),
+	 op_D			varchar(255),
 	 primary key (choice_queid)
 	);
 
 /* 判断题 */
 create table judgequestion
 	(judge_queid	int,
-	 title 				varchar(255),
-	 ans 					varchar(8),
-	 op_A					varchar(255),
-	 op_B					varchar(255),
+	 title 			varchar(255),
+	 ans 			varchar(8),
+	 op_A			varchar(255),
+	 op_B			varchar(255),
 	 primary key (judge_queid)
 	);
 
 create table student
-	(stu_id		int auto_increment,
+	(stu_id		int auto_increment not null,
 	 name 		varchar(22),
 	 point		int,
 	 grade    int,
@@ -84,8 +84,3 @@ create table solve_question
 	 foreign key (que_id) references question(que_id)
 		on delete cascade
 	);
-
-
-
-
-
