@@ -1,4 +1,4 @@
-package com.scut.demo.dao;
+package com.scut.demo.mapper;
 
 import com.scut.demo.entity.KnowledgePoint;
 import org.apache.ibatis.annotations.Mapper;
@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface KnowledgePointDao {
+public interface KnowledgePointMapper {
     // 添加知识点
     boolean insertKnowledgePoint(KnowledgePoint knowledgePoint);
     // 根据id修改知识点

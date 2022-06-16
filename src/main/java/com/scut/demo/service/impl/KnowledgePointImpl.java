@@ -1,6 +1,6 @@
 package com.scut.demo.service.impl;
 
-import com.scut.demo.dao.KnowledgePointDao;
+import com.scut.demo.mapper.KnowledgePointMapper;
 import com.scut.demo.entity.KnowledgePoint;
 import com.scut.demo.service.KnowledgePointService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class KnowledgePointImpl implements KnowledgePointService {
     @Autowired
-    private KnowledgePointDao knowledgePointDao;
+    private KnowledgePointMapper knowledgePointDao;
 
     @Override
     public boolean insertKnowledgePoint(KnowledgePoint knowledgePoint) {

@@ -1,5 +1,6 @@
 package com.scut.demo.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.scut.demo.entity.KnowledgePoint;
 import com.scut.demo.service.KnowledgePointService;
 import com.scut.demo.utils.Result;
@@ -27,7 +28,8 @@ public class KnowledgeController {
 
     // 添加知识点
     @PostMapping("/post")
-    public Result postKnowledgePoint(@RequestParam KnowledgePoint knowledgePoint) {
+    public Result postKnowledgePoint(@RequestBody KnowledgePoint knowledgePoint) {
+        System.out.println(JSON.toJSON(knowledgePoint));
         boolean success = knowledgePointService.insertKnowledgePoint(knowledgePoint);
         if (success) {
             return Result.ok();
@@ -36,7 +38,7 @@ public class KnowledgeController {
         }
     }
 
-    // 删除知识点
+    // 根据id删除知识点
     @DeleteMapping("/delete/{id}")
     public Result deleteKnowledgePointById(@PathVariable int id) {
         boolean success = knowledgePointService.deleteKnowledgePointById(id);
@@ -47,9 +49,9 @@ public class KnowledgeController {
         }
     }
 
-    // 修改知识点
+    // 根据id修改知识点
     @PutMapping("/update")
-    public Result updateKnowledgePoint(@RequestParam KnowledgePoint knowledgePoint) {
+    public Result updateKnowledgePoint(@RequestBody KnowledgePoint knowledgePoint) {
         boolean success = knowledgePointService.updateKnowledgePointById(knowledgePoint);
         if (success) {
             return Result.ok();

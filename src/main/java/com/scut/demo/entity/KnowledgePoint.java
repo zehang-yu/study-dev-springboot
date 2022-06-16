@@ -10,10 +10,20 @@ public class KnowledgePoint {
     // 知识点内容
     private String content;
 
+    public KnowledgePoint(int id, String chapter, String section, String content) {
+        this.id = id;
+        this.chapter = chapter;
+        this.section = section;
+        this.content = content;
+    }
+
     public KnowledgePoint(String chapter, String section, String content) {
         this.chapter = chapter;
         this.section = section;
         this.content = content;
+    }
+
+    public KnowledgePoint() {
     }
 
     public int getId() {
