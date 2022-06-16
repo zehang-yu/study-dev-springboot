@@ -1,0 +1,16 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&serverTimeZone=UTC
+    username: root
+    password: Yzh1999
+
+#mybatis:
+#  mapper-location: classpath:**/*.xml
+
+logging:
+  level:
+    com.scut.demo.dao: debug
