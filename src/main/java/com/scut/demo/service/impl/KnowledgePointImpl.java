@@ -36,7 +36,6 @@ public class KnowledgePointImpl implements KnowledgePointService {
             return null;
         }
         ChapterDto chapterDto = new ChapterDto(list);
-        System.out.println(chapterDto);
         return chapterDto;
     }
 }
