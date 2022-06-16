@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf-8&serverTimeZone=UTC
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8
     username: root
-    password: password
+    password: 123456
 
 #mybatis:
 #  mapper-location: classpath:**/*.xml
@@ -14,3 +14,6 @@ spring:
 logging:
   level:
     com.scut.demo.dao: debug
+
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
