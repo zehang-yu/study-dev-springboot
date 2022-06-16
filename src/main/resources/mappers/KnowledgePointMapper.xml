@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootmybatis.mappers.UserMapper">
+    <insert id="insertKnowledgePoint" parameterType="com.scut.demo.entity.KnowledgePoint">
+        insert into knowledgepoint (#{content}, #{section}, #{chapter})
+    </insert>
+
+    <update id="updateKnowledgePointById" parameterType="com.scut.demo.entity.KnowledgePoint">
+        update knowledge set chapter=#{chapter}, `section`=#{section}, content=#{content} where id=#{id}
+    </update>
+
+    <delete id="deleteKnowledgePointById">
+        delete from knowledge where id=#{id}
+    </delete>
+
+    <select id="queryKnowledgePointByChapter" resultType="com.scut.demo.entity.KnowledgePoint">
+        select * from knowledge where chapter=#{chapter}
+    </select>
+
+</mapper>
