@@ -5,7 +5,7 @@ import com.scut.demo.mapper.TestInfoMapper;
 
 public interface TestInfoService {
     //增加选择题
-    void insertChoiceQuestion(TestInfo testInfo);
+    boolean insertChoiceQuestion(TestInfo testInfo);
 
     //获取问题文本
     TestInfo getQuestionTextById(int id);

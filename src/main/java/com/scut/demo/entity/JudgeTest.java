@@ -3,9 +3,28 @@ package com.scut.demo.entity;
 public class JudgeTest {
     int ID;
     String content;//题目的文本
+    String correct;//正确选项 A或B
     String op_A;//选项文本
     String op_B;
-    String correct;//正确选项 A或B
+
+
+    public JudgeTest(int ID, String content, String op_A, String op_B, String correct) {
+        this.ID = ID;
+        this.content = content;
+        this.op_A = op_A;
+        this.op_B = op_B;
+        this.correct = correct;
+    }
+
+    public JudgeTest(String content, String op_A, String op_B, String correct) {
+        this.content = content;
+        this.op_A = op_A;
+        this.op_B = op_B;
+        this.correct = correct;
+    }
+
+    public JudgeTest() {
+    }
 
     public int getID() {
         return ID;

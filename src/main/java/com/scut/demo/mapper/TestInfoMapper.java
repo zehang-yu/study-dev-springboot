@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TestInfoMapper {
     //增加选择题
-    void insertChoiceQuestion(TestInfo testInfo);
+    boolean insertChoiceQuestion(TestInfo testInfo);
 
     //获取问题文本
     @Results(value = {
