@@ -23,6 +23,7 @@ public class KnowledgeController {
         if (kps == null) {
             return Result.error().message("查询失败, 没有对应的章节");
         } else {
+            System.out.println(JSON.toJSON(kps));
             return Result.ok().put("kps", kps);
         }
     }
