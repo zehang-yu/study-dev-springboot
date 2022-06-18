@@ -13,7 +13,7 @@ create table knowledgepoint
 
 /* 问题父表 */
 create table question
-	(que_id 		int auto_increment not null,
+	(que_id 		int,
  	 title 			varchar(255),
 	 ans 			varchar(8),	 
 	 primary key (que_id)
@@ -36,8 +36,6 @@ create table judgequestion
 	(judge_queid	int,
 	 title 			varchar(255),
 	 ans 			varchar(8),
-	 op_A			varchar(255),
-	 op_B			varchar(255),
 	 primary key (judge_queid)
 	);
 
