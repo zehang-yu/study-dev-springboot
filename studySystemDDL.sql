@@ -13,7 +13,7 @@ create table knowledgepoint
 
 /* 问题父表 */
 create table question
-	(que_id 		int auto_increment not null,
+	(que_id 		int,
  	 title 			varchar(255),
 	 ans 			varchar(8),	 
 	 primary key (que_id)
@@ -36,8 +36,6 @@ create table judgequestion
 	(judge_queid	int,
 	 title 			varchar(255),
 	 ans 			varchar(8),
-	 op_A			varchar(255),
-	 op_B			varchar(255),
 	 primary key (judge_queid)
 	);
 
@@ -84,3 +82,14 @@ create table solve_question
 	 foreign key (que_id) references question(que_id)
 		on delete cascade
 	);
+
+/* 学生教学生 */
+create table solve_question
+    (learn_stu_id		int,
+     helper_stu_id		int,
+     primary key (learn_stu_id,helper_stu_id),
+     foreign key (learn_stu_id) references student(stu_id)
+         on delete cascade,
+     foreign key (helper_stu_id) references student(stu_id)
+         on delete cascade
+    );

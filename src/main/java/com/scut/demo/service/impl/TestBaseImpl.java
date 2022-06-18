@@ -20,7 +20,8 @@ public class TestBaseImpl implements TestBaseService {
 
     @Override
     public List<TestBase> getAllTestBase() {
-        return testBaseMapper.getAllTestBase();
+        List<TestBase> allTest=testBaseMapper.getAllTestBase();
+        return allTest;
     }
 
     @Override

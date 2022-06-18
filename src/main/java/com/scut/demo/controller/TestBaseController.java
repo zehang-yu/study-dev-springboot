@@ -2,6 +2,7 @@ package com.scut.demo.controller;
 
 import com.scut.demo.entity.TestBase;
 import com.scut.demo.service.TestBaseService;
+import com.scut.demo.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,8 @@ public class TestBaseController {
     TestBaseService testBaseService;
 
     @GetMapping("/get")
-    List<TestBase> getAllTestBase(){
+    Result getAllTestBase(){
         List<TestBase> res = testBaseService.getAllTestBase();
-        return res;
+        return Result.ok().put("question",res);
     }
 }
