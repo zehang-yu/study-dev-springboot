@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Configurable;
 
 /* 这里表示选择题, 因为懒得改名字了......*/
 public class TestInfo {
-    int testId;
-    String testName;//题目的文本
+    int choiceQueid;
+    String title;//题目的文本
     String opA;//选项文本
     String opB;
     String opC;
     String opD;
-    String correct;//正确选项
+    String ans;//正确选项
 
 /*    int testId;
     String name;//题目的文本
@@ -24,13 +24,13 @@ public class TestInfo {
     }
 
     public TestInfo(int id, String testName, String op_A, String op_B, String op_C, String op_D, String correct) {
-        this.testId = id;
-        this.testName = testName;
+        this.choiceQueid = id;
+        this.title = testName;
         this.opA = op_A;
         this.opB = op_B;
         this.opC = op_C;
         this.opD = op_D;
-        this.correct = correct;
+        this.ans = correct;
     }
 
     public TestInfo(String testName, String opA, String opB, String opC, String opD, String correct) {
@@ -43,19 +43,19 @@ public class TestInfo {
     }
 
     public int getTestId() {
-        return testId;
+        return choiceQueid;
     }
 
     public void setTestId(int testId) {
-        this.testId = testId;
+        this.choiceQueid = testId;
     }
 
     public String getTestName() {
-        return testName;
+        return title;
     }
 
     public void setTestName(String testName) {
-        this.testName = testName;
+        this.title = testName;
     }
 
     public String getOpA() {
@@ -91,10 +91,10 @@ public class TestInfo {
     }
 
     public String getCorrect() {
-        return correct;
+        return ans;
     }
 
     public void setCorrect(String correct) {
-        this.correct = correct;
+        this.ans = correct;
     }
 }

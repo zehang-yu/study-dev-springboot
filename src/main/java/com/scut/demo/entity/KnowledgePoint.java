@@ -2,7 +2,7 @@ package com.scut.demo.entity;
 
 public class KnowledgePoint {
     // id
-    private int id;
+    private int kpId;
     // 哪一章的名字
     private String chapter;
     // 哪一节的名字
@@ -11,7 +11,7 @@ public class KnowledgePoint {
     private String content;
 
     public KnowledgePoint(int id, String chapter, String section, String content) {
-        this.id = id;
+        this.kpId = id;
         this.chapter = chapter;
         this.section = section;
         this.content = content;
@@ -26,12 +26,12 @@ public class KnowledgePoint {
     public KnowledgePoint() {
     }
 
-    public int getId() {
-        return id;
+    public int getKpId() {
+        return kpId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setKpId(int kpId) {
+        this.kpId = kpId;
     }
 
     public String getChapter() {

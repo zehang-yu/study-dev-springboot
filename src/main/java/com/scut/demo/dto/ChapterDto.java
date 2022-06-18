@@ -81,14 +81,14 @@ class SectionDto {
 }
 
 class ContentDto {
-    private int id;
+    private int kpId;
     private String label;
 
     public ContentDto() {
     }
 
     public ContentDto(KnowledgePoint k) {
-        this.id = k.getId();
+        this.kpId = k.getKpId();
         this.label = k.getContent();
     }
 
@@ -100,11 +100,11 @@ class ContentDto {
         this.label = label;
     }
 
-    public int getId() {
-        return id;
+    public int getKpId() {
+        return kpId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setKpId(int kpId) {
+        this.kpId = kpId;
     }
 }
