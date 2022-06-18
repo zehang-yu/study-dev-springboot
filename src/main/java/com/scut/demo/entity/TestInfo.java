@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Configurable;
 
 /* 这里表示选择题, 因为懒得改名字了......*/
 public class TestInfo {
-    int testId;
-    String testName;//题目的文本
+    int choiceQueid;
+    String title;//题目的文本
     String opA;//选项文本
     String opB;
     String opC;
     String opD;
-    String correct;//正确选项
+    String ans;//正确选项
 
 /*    int testId;
     String name;//题目的文本
@@ -24,29 +24,38 @@ public class TestInfo {
     }
 
     public TestInfo(int id, String testName, String op_A, String op_B, String op_C, String op_D, String correct) {
-        this.testId = id;
-        this.testName = testName;
+        this.choiceQueid = id;
+        this.title = testName;
         this.opA = op_A;
         this.opB = op_B;
         this.opC = op_C;
         this.opD = op_D;
-        this.correct = correct;
+        this.ans = correct;
+    }
+
+    public TestInfo(String title, String opA, String opB, String opC, String opD, String ans) {
+        this.title = title;
+        this.opA = opA;
+        this.opB = opB;
+        this.opC = opC;
+        this.opD = opD;
+        this.ans = ans;
     }
 
     public int getTestId() {
-        return testId;
+        return choiceQueid;
     }
 
     public void setTestId(int testId) {
-        this.testId = testId;
+        this.choiceQueid = testId;
     }
 
     public String getTestName() {
-        return testName;
+        return title;
     }
 
     public void setTestName(String testName) {
-        this.testName = testName;
+        this.title = testName;
     }
 
     public String getOpA() {
@@ -82,10 +91,35 @@ public class TestInfo {
     }
 
     public String getCorrect() {
-        return correct;
+        return ans;
     }
 
     public void setCorrect(String correct) {
-        this.correct = correct;
+        this.ans = correct;
+    }
+
+    /********下面是冗余的函数..*******/
+    public int getChoiceQueid() {
+        return choiceQueid;
+    }
+
+    public void setChoiceQueid(int choiceQueid) {
+        this.choiceQueid = choiceQueid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAns() {
+        return ans;
+    }
+
+    public void setAns(String ans) {
+        this.ans = ans;
     }
 }
