@@ -82,3 +82,14 @@ create table solve_question
 	 foreign key (que_id) references question(que_id)
 		on delete cascade
 	);
+
+/* 学生教学生 */
+create table solve_question
+    (learn_stu_id		int,
+     helper_stu_id		int,
+     primary key (learn_stu_id,helper_stu_id),
+     foreign key (learn_stu_id) references student(stu_id)
+         on delete cascade,
+     foreign key (helper_stu_id) references student(stu_id)
+         on delete cascade
+    );
