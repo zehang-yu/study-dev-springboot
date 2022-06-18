@@ -2,7 +2,7 @@ package com.scut.demo.entity;
 
 public class HelperAward {
 
-    public HelperAward(int id,String name, String point_type, int success_num, int defeat_num, boolean award) {
+    public HelperAward(int id,String name, String point_type, int success_num, int defeat_num, int award) {
         this.stu_id=id;
         this.name = name;
         this.point_type = point_type;
@@ -51,11 +51,11 @@ public class HelperAward {
         this.defeat_num = defeat_num;
     }
 
-    public boolean isAward() {
+    public int isAward() {
         return award;
     }
 
-    public void setAward(boolean award) {
+    public void setAward(int award) {
         this.award = award;
     }
 
@@ -64,5 +64,5 @@ public class HelperAward {
     String point_type;
     int success_num;
     int defeat_num;
-    boolean award;
+    int award;
 }
