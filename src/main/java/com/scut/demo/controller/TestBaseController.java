@@ -17,7 +17,7 @@ public class TestBaseController {
     @Autowired
     TestBaseService testBaseService;
 
-    @GetMapping
+    @GetMapping("/get")
     List<TestBase> getAllTestBase(){
         List<TestBase> res = testBaseService.getAllTestBase();
         return res;
