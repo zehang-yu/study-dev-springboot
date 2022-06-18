@@ -34,12 +34,12 @@ public class TestInfo {
     }
 
     public TestInfo(String testName, String opA, String opB, String opC, String opD, String correct) {
-        this.testName = testName;
+        this.choiceQueid = choiceQueid;
         this.opA = opA;
         this.opB = opB;
         this.opC = opC;
         this.opD = opD;
-        this.correct = correct;
+        this.ans = correct;
     }
 
     public int getTestId() {
