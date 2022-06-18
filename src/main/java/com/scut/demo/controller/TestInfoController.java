@@ -25,6 +25,7 @@ public class TestInfoController {
     // axios base URL /test/getQuestion/
     @PostMapping("/insertChoiceQuestion")
     public Result insertChoiceQuestion(@RequestBody TestInfo testInfo){
+        System.out.println(testInfo.getTitle());
         boolean success = testInfoService.insertChoiceQuestion(testInfo);
         if(success)
             return Result.ok().put("插入成功",testInfo);

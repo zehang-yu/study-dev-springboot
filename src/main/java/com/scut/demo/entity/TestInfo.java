@@ -33,13 +33,13 @@ public class TestInfo {
         this.ans = correct;
     }
 
-    public TestInfo(String testName, String opA, String opB, String opC, String opD, String correct) {
-        this.choiceQueid = choiceQueid;
+    public TestInfo(String title, String opA, String opB, String opC, String opD, String ans) {
+        this.title = title;
         this.opA = opA;
         this.opB = opB;
         this.opC = opC;
         this.opD = opD;
-        this.ans = correct;
+        this.ans = ans;
     }
 
     public int getTestId() {
@@ -96,5 +96,30 @@ public class TestInfo {
 
     public void setCorrect(String correct) {
         this.ans = correct;
+    }
+
+    /********下面是冗余的函数..*******/
+    public int getChoiceQueid() {
+        return choiceQueid;
+    }
+
+    public void setChoiceQueid(int choiceQueid) {
+        this.choiceQueid = choiceQueid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAns() {
+        return ans;
+    }
+
+    public void setAns(String ans) {
+        this.ans = ans;
     }
 }

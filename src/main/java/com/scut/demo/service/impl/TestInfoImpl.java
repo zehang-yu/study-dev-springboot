@@ -14,9 +14,11 @@ public class TestInfoImpl implements TestInfoService {
     @Autowired
     private TestInfoMapper testInfoMapper;
 
+    @Autowired
+    private TestBaseService testBaseService;
+
     @Override
     public boolean insertChoiceQuestion(TestInfo testInfo){
-        TestBaseService testBaseService = new TestBaseImpl();
         int test_id;
         Integer max_id = testBaseService.getMaxTestID();
         if(max_id==null)

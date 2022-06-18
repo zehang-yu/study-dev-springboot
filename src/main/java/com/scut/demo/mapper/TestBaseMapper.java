@@ -16,5 +16,5 @@ public interface TestBaseMapper {
     List<TestBase> getAllTestBase();
 
     //获取所有题id的最大值
-    int getMaxTestID();
+    Integer getMaxTestID();
 }
