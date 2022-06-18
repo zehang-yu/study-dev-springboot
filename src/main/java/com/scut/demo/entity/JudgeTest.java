@@ -1,68 +1,42 @@
 package com.scut.demo.entity;
 
 public class JudgeTest {
-    int ID;
-    String content;//题目的文本
-    String correct;//正确选项 A或B
-    String op_A;//选项文本
-    String op_B;
+    int judgeQueid;
+    String title;//题目的文本
+    String ans;//正确选项 A或B
 
-
-    public JudgeTest(int ID, String content, String op_A, String op_B, String correct) {
-        this.ID = ID;
-        this.content = content;
-        this.op_A = op_A;
-        this.op_B = op_B;
-        this.correct = correct;
+    public JudgeTest(int judgeQueid, String title, String ans) {
+        this.judgeQueid = judgeQueid;
+        this.title = title;
+        this.ans = ans;
     }
 
-    public JudgeTest(String content, String op_A, String op_B, String correct) {
-        this.content = content;
-        this.op_A = op_A;
-        this.op_B = op_B;
-        this.correct = correct;
+    public JudgeTest(String title, String ans) {
+        this.title = title;
+        this.ans = ans;
     }
 
-    public JudgeTest() {
+    public int getJudgeQueid() {
+        return judgeQueid;
     }
 
-    public int getID() {
-        return ID;
+    public void setJudgeQueid(int judgeQueid) {
+        this.judgeQueid = judgeQueid;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public String getTitle() {
+        return title;
     }
 
-    public String getContent() {
-        return content;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getAns() {
+        return ans;
     }
 
-    public String getOp_A() {
-        return op_A;
-    }
-
-    public void setOp_A(String op_A) {
-        this.op_A = op_A;
-    }
-
-    public String getOp_B() {
-        return op_B;
-    }
-
-    public void setOp_B(String op_B) {
-        this.op_B = op_B;
-    }
-
-    public String getCorrect() {
-        return correct;
-    }
-
-    public void setCorrect(String correct) {
-        this.correct = correct;
+    public void setAns(String ans) {
+        this.ans = ans;
     }
 }

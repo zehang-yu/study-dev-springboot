@@ -1,45 +1,42 @@
 package com.scut.demo.entity;
 
 public class TestBase {
-    int ID;
-    String content;//题目的文本
-    String correct;//正确选项,用单个字母表示
+    int queid;
+    String title;//题目的文本
+    String ans;//正确选项,用单个字母表示
 
-    public TestBase(int ID, String content, String correct) {
-        this.ID = ID;
-        this.content = content;
-        this.correct = correct;
+    public TestBase(int queid, String title, String ans) {
+        this.queid = queid;
+        this.title = title;
+        this.ans = ans;
     }
 
-    public TestBase(String content, String correct) {
-        this.content = content;
-        this.correct = correct;
+    public TestBase(String title, String ans) {
+        this.title = title;
+        this.ans = ans;
     }
 
-    public TestBase() {
+    public int getQueid() {
+        return queid;
     }
 
-    public int getID() {
-        return ID;
+    public void setQueid(int queid) {
+        this.queid = queid;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public String getTitle() {
+        return title;
     }
 
-    public String getContent() {
-        return content;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getAns() {
+        return ans;
     }
 
-    public String getCorrect() {
-        return correct;
-    }
-
-    public void setCorrect(String correct) {
-        this.correct = correct;
+    public void setAns(String ans) {
+        this.ans = ans;
     }
 }

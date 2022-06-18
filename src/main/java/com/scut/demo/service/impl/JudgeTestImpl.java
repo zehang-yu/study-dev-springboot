@@ -14,9 +14,11 @@ public class JudgeTestImpl implements JudgeTestService {
     @Autowired
     private JudgeTestMapper judgeTestMapper;
 
+    @Autowired
+    private TestBaseService testBaseService;
+
     @Override
     public boolean insertJudgeQuestion(JudgeTest judgeTest) {
-        TestBaseService testBaseService = new TestBaseImpl();
         int test_id;
         Integer max_id = testBaseService.getMaxTestID();
         if(max_id==null)
@@ -24,8 +26,8 @@ public class JudgeTestImpl implements JudgeTestService {
         else{
             test_id= max_id+1;
         }
-        testBaseService.insertTestBase(new TestBase(test_id,judgeTest.getContent(),judgeTest.getCorrect()));
-        judgeTest.setID(test_id);
+        testBaseService.insertTestBase(new TestBase(test_id,judgeTest.getTitle(),judgeTest.getAns()));
+        judgeTest.setJudgeQueid(test_id);
         return judgeTestMapper.insertJudgeQuestion(judgeTest);
     }
 
