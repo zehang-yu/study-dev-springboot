@@ -33,6 +33,15 @@ public class TestInfo {
         this.correct = correct;
     }
 
+    public TestInfo(String testName, String opA, String opB, String opC, String opD, String correct) {
+        this.testName = testName;
+        this.opA = opA;
+        this.opB = opB;
+        this.opC = opC;
+        this.opD = opD;
+        this.correct = correct;
+    }
+
     public int getTestId() {
         return testId;
     }
