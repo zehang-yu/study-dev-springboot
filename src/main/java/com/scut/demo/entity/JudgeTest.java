@@ -3,7 +3,10 @@ package com.scut.demo.entity;
 public class JudgeTest {
     int judgeQueid;
     String title;//题目的文本
-    String ans;//正确选项 A或B
+    String ans;//正确选项
+
+    public JudgeTest() {
+    }
 
     public JudgeTest(int judgeQueid, String title, String ans) {
         this.judgeQueid = judgeQueid;

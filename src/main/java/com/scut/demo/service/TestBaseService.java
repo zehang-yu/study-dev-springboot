@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface TestBaseService {
 
-    //往问题父表添加记录, isJudge: 是否为选择题
+    //往问题父表添加记录
     void insertTestBase(TestBase testBase);
 
     //获取题父表里的所有内容
@@ -14,4 +14,7 @@ public interface TestBaseService {
 
     //获取所有题id的最大值
     Integer getMaxTestID();
+
+    //根据id删除题目
+    void deleteTestBaseById(int id);
 }

@@ -17,4 +17,7 @@ public interface TestBaseMapper {
 
     //获取所有题id的最大值
     Integer getMaxTestID();
+
+    //根据id删除记录
+    void deleteTestBaseById(int id);
 }

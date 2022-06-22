@@ -8,6 +8,6 @@
     </insert>
 
     <select id="getJudgeTestById" resultType="com.scut.demo.entity.JudgeTest">
-        select * from judgequestion where judge_queid=#{id}
+        select * from judgequestion where judge_queid=#{judgeQueid}
     </select>
 </mapper>

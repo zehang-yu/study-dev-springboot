@@ -28,4 +28,7 @@ public class TestBaseImpl implements TestBaseService {
     public Integer getMaxTestID() {
         return testBaseMapper.getMaxTestID();
     }
+
+    @Override
+    public void deleteTestBaseById(int id){ testBaseMapper.deleteTestBaseById(id);}
 }
