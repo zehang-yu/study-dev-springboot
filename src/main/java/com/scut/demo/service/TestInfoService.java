@@ -13,4 +13,6 @@ public interface TestInfoService {
     String getOptionTextById(int id);
     //获取正确答案
     String getCorrectOptionAById(int id);
+    //根据id删除选择题
+    void deleteChoiceQuestionById(int id);
 }

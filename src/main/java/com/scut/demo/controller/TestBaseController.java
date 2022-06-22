@@ -22,8 +22,9 @@ public class TestBaseController {
         return Result.ok().put("question",res);
     }
 
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     Result deleteTestBaseById(@PathVariable int id){
+        testBaseService.deleteTestBaseById(id);
         return Result.ok();
     }
 }

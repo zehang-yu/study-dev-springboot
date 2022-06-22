@@ -35,4 +35,7 @@ public class JudgeTestImpl implements JudgeTestService {
     public JudgeTest getJudgeTestById(int id) {
         return judgeTestMapper.getJudgeTestById(id);
     }
+
+    @Override
+    public void deleteJudgeTestById(int id){ judgeTestMapper.deleteJudgeTestById(id);}
 }

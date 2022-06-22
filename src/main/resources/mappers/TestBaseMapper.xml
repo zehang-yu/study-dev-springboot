@@ -18,4 +18,8 @@
     <select id="getMaxTestID" resultType="Integer">
         select max(que_id) from question;
     </select>
+
+    <delete id="deleteTestBaseById">
+        delete from question where que_id=#{id}
+    </delete>
 </mapper>

@@ -24,8 +24,8 @@
         update knowledgepoint set chapter=#{chapter}, `section`=#{section}, content=#{content} where id=#{id}
     </update>
 
-    <delete id="deleteKnowledgePointById">
-        delete from knowledgepoint where id=#{id}
+    <delete id="deleteChoiceQuestionById">
+        delete from choicequestion where choice_queid=#{id}
     </delete>
 
 <!--    <select id="getQuestionTextById" resultMap="testInfoMap">-->

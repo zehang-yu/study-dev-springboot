@@ -10,4 +10,8 @@
     <select id="getJudgeTestById" resultType="com.scut.demo.entity.JudgeTest">
         select * from judgequestion where judge_queid=#{judgeQueid}
     </select>
+
+    <delete id="deleteJudgeTestById">
+        delete from judgequestion where judge_queid=#{id}
+    </delete>
 </mapper>

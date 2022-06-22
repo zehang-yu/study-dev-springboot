@@ -45,4 +45,7 @@ public class TestInfoImpl implements TestInfoService {
     public String getCorrectOptionAById(int id) {
         return testInfoMapper.getCorrectOptionAById(id);
     }
+
+    @Override
+    public void deleteChoiceQuestionById(int id) { testInfoMapper.deleteChoiceQuestionById(id);}
 }
