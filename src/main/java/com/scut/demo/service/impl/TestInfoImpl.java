@@ -37,6 +37,9 @@ public class TestInfoImpl implements TestInfoService {
     }
 
     @Override
+    public int[] getQuestionIDs() { return testInfoMapper.getQuestionIDs();}
+
+    @Override
     public String getOptionTextById(int id) {
         return testInfoMapper.getOptionTextById(id);
     }

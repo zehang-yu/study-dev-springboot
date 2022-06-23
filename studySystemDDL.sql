@@ -36,6 +36,8 @@ create table judgequestion
 	(judge_queid	int,
 	 title 			varchar(255),
 	 ans 			varchar(8),
+	 op_A			varchar(255),
+	 op_B			varchar(255),
 	 primary key (judge_queid)
 	);
 

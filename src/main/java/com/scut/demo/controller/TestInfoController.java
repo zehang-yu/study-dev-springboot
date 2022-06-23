@@ -22,6 +22,8 @@ public class TestInfoController {
        return Result.ok().put("testInfo",testInfo);
     }
 
+    //获取问题id
+
     // axios base URL /test/getQuestion/
     @PostMapping("/insertChoiceQuestion")
     public Result insertChoiceQuestion(@RequestBody TestInfo testInfo){
