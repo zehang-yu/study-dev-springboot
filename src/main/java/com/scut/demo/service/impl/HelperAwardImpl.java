@@ -15,7 +15,7 @@ public class HelperAwardImpl implements HelperAwardService {
     private HelperAwardMapper helperAwardMapper;
 
     @Override
-    public boolean updateHelper(int id) {
+    public boolean updateHelper() {
         return false;
     }
 
