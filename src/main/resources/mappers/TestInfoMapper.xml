@@ -36,4 +36,8 @@
         select * from choicequestion where choice_queid=#{id}
     </select>
 
+    <select id="getQuestionIds" resultType="com.scut.demo.entity.TestInfo">
+        select choice_queid from choicequestion
+    </select>
+
 </mapper>
