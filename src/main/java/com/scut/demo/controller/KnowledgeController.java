@@ -16,6 +16,17 @@ public class KnowledgeController {
     @Autowired
     private KnowledgePointService knowledgePointService;
 
+    // 获取所有章节知识点
+    @GetMapping("/chapters")
+    public Result getKnowledgePoints() {
+        List<ChapterDto> chapters = knowledgePointService.queryAllKnowledgePoints();
+        if (chapters == null) {
+            return Result.error().message("没有数据");
+        } else {
+            return Result.ok().put("chapters", chapters);
+        }
+    }
+
     // 根据章节得到知识点
     @GetMapping("/get/{chapter}")
     public Result getKnowledgePointsByChapter(@PathVariable String chapter) {
@@ -23,7 +34,6 @@ public class KnowledgeController {
         if (kps == null) {
             return Result.error().message("查询失败, 没有对应的章节");
         } else {
-            System.out.println(JSON.toJSON(kps));
             return Result.ok().put("kps", kps);
         }
     }

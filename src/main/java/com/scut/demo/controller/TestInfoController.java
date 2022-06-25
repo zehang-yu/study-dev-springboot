@@ -6,6 +6,8 @@ import com.scut.demo.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/test")
 public class TestInfoController {
@@ -14,15 +16,17 @@ public class TestInfoController {
     private TestInfoService testInfoService;
 
     //获取问题文本
-    @GetMapping("/getQuestion/{id}")
-    public Result getQuestionTextById(@PathVariable int id){
-       TestInfo testInfo = testInfoService.getQuestionTextById(id);
-       System.out.println(testInfo.getTestId());
+    @GetMapping("/getQuestion")
+    public Result getQuestionTextById(){
+       List<TestInfo> testInfo = testInfoService.getQuestionText();
+       for(TestInfo item : testInfo){
+           System.out.println(item.getTestId());
+       }
        //System.out.println(testInfo.getTest_name());
        return Result.ok().put("testInfo",testInfo);
     }
 
-    //获取问题id
+    //学生答题结果
 
     // axios base URL /test/getQuestion/
     @PostMapping("/insertChoiceQuestion")

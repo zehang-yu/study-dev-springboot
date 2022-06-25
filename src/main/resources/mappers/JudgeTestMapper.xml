@@ -11,6 +11,9 @@
         select * from judgequestion where judge_queid=#{judgeQueid}
     </select>
 
+    <select id="getJudgeText" resultType="com.scut.demo.entity.JudgeTest">
+        select * from judgequestion
+    </select>
     <delete id="deleteJudgeTestById">
         delete from judgequestion where judge_queid=#{id}
     </delete>

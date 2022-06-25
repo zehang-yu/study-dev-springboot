@@ -44,10 +44,31 @@ create table judgequestion
 create table student
 	(stu_id		int auto_increment not null,
 	 name 		varchar(22),
-	 point		int,
+	 point		int,  /*积分*/
 	 grade    int,
+	 account    varchar(22),
+	 password   varchar(22),
 	 primary key (stu_id)
 	);
+
+create table teacher
+(teacher_id		int auto_increment not null,
+ name 		varchar(22),
+ account    varchar(22),
+ password   varchar(22),
+ primary key (teacher_id)
+);
+
+/*老师与学生的关系: 老师教学生*/
+create table teach
+(teacher_id		int,
+ stu_id 		int,
+ primary key (teacher_id, stu_id),
+ foreign key (teacher_id) references teacher(teacher_id)
+     on delete cascade,
+ foreign key (stu_id) references student(stu_id)
+     on delete cascade
+);
 
 /* 知识点和试题的联系 */
 create table knowledgepoint_question
@@ -86,7 +107,7 @@ create table solve_question
 	);
 
 /* 学生教学生 */
-create table solve_question
+create table help_student
     (learn_stu_id		int,
      helper_stu_id		int,
      primary key (learn_stu_id,helper_stu_id),
