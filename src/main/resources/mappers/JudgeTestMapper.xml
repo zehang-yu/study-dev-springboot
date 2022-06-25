@@ -4,10 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scut.demo.mapper.JudgeTestMapper">
     <insert id="insertJudgeQuestion" parameterType="com.scut.demo.entity.JudgeTest">
-        insert into judgequestion(judge_queid, title, ans, op_A, op_B) values (#{ID}, #{content}, #{correct}, #{op_A},#{op_B})
+        insert into judgequestion(judge_queid, title, ans) values (#{judgeQueid}, #{title}, #{ans})
     </insert>
 
     <select id="getJudgeTestById" resultType="com.scut.demo.entity.JudgeTest">
-        select * from judgequestion where judge_queid=#{id}
+        select * from judgequestion where judge_queid=#{judgeQueid}
     </select>
+
+    <delete id="deleteJudgeTestById">
+        delete from judgequestion where judge_queid=#{id}
+    </delete>
 </mapper>

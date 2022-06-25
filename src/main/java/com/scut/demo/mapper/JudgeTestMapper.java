@@ -12,4 +12,7 @@ public interface JudgeTestMapper {
 
     //根据id获取判断题
     JudgeTest getJudgeTestById(int id);
+
+    //根据id删除判断题
+    void deleteJudgeTestById(int id);
 }

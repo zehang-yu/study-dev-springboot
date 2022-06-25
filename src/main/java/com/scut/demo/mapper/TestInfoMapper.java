@@ -16,9 +16,15 @@ public interface TestInfoMapper {
     @Results(value = {
             @Result(column = "test_name", property = "name")
     })
+
+    //获取全部问题id
+    int[] getQuestionIDs();
+
     TestInfo getQuestionTextById(int id);
     //获取选项文本
     String getOptionTextById(int id);
     //获取正确答案
     String getCorrectOptionAById(int id);
+    //根据id删除选择题
+    void deleteChoiceQuestionById(int id);
 }

@@ -9,8 +9,12 @@ public interface TestInfoService {
 
     //获取问题文本
     TestInfo getQuestionTextById(int id);
+    //获取所有的问题id
+    int[] getQuestionIDs();
     //获取选项文本
     String getOptionTextById(int id);
     //获取正确答案
     String getCorrectOptionAById(int id);
+    //根据id删除选择题
+    void deleteChoiceQuestionById(int id);
 }

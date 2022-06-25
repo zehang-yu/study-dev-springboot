@@ -14,9 +14,11 @@ public class TestInfoImpl implements TestInfoService {
     @Autowired
     private TestInfoMapper testInfoMapper;
 
+    @Autowired
+    private TestBaseService testBaseService;
+
     @Override
     public boolean insertChoiceQuestion(TestInfo testInfo){
-        TestBaseService testBaseService = new TestBaseImpl();
         int test_id;
         Integer max_id = testBaseService.getMaxTestID();
         if(max_id==null)
@@ -35,6 +37,9 @@ public class TestInfoImpl implements TestInfoService {
     }
 
     @Override
+    public int[] getQuestionIDs() { return testInfoMapper.getQuestionIDs();}
+
+    @Override
     public String getOptionTextById(int id) {
         return testInfoMapper.getOptionTextById(id);
     }
@@ -43,4 +48,7 @@ public class TestInfoImpl implements TestInfoService {
     public String getCorrectOptionAById(int id) {
         return testInfoMapper.getCorrectOptionAById(id);
     }
+
+    @Override
+    public void deleteChoiceQuestionById(int id) { testInfoMapper.deleteChoiceQuestionById(id);}
 }

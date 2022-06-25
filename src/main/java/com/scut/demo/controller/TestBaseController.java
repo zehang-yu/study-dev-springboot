@@ -2,10 +2,9 @@ package com.scut.demo.controller;
 
 import com.scut.demo.entity.TestBase;
 import com.scut.demo.service.TestBaseService;
+import com.scut.demo.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,9 +16,15 @@ public class TestBaseController {
     @Autowired
     TestBaseService testBaseService;
 
-    @GetMapping
-    List<TestBase> getAllTestBase(){
+    @GetMapping("/get")
+    Result getAllTestBase(){
         List<TestBase> res = testBaseService.getAllTestBase();
-        return res;
+        return Result.ok().put("question",res);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    Result deleteTestBaseById(@PathVariable int id){
+        testBaseService.deleteTestBaseById(id);
+        return Result.ok();
     }
 }
