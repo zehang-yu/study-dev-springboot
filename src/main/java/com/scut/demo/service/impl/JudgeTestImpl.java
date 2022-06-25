@@ -1,6 +1,7 @@
 package com.scut.demo.service.impl;
 
 import com.scut.demo.entity.JudgeTest;
+import com.scut.demo.entity.StudentAnswer;
 import com.scut.demo.entity.TestBase;
 import com.scut.demo.mapper.JudgeTestMapper;
 import com.scut.demo.mapper.KnowledgePointMapper;
@@ -39,6 +40,11 @@ public class JudgeTestImpl implements JudgeTestService {
     @Override
     public JudgeTest getJudgeTestById(int id) {
         return judgeTestMapper.getJudgeTestById(id);
+    }
+
+    @Override
+    public boolean studentAnswerJudge(StudentAnswer studentAnswer) {
+        return judgeTestMapper.studentAnswerJudge(studentAnswer);
     }
 
     @Override

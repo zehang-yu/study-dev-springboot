@@ -11,6 +11,10 @@
         select * from judgequestion where judge_queid=#{judgeQueid}
     </select>
 
+    <insert id="studentAnswerJudge" parameterType="com.scut.demo.entity.StudentAnswer">
+        replace into do_question(stu_id, que_id,record) values (#{studentId}, #{questionId},#{record})
+    </insert>
+
     <select id="getJudgeText" resultType="com.scut.demo.entity.JudgeTest">
         select * from judgequestion
     </select>

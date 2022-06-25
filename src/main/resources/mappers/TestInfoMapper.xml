@@ -20,6 +20,10 @@
         insert into choicequestion(choice_queid, title,ans,op_A,op_B,op_C,op_D) values (#{choiceQueid}, #{title},#{ans}, #{opA},#{opB},#{opC},#{opD})
     </insert>
 
+    <insert id="studentAnswer" parameterType="com.scut.demo.entity.StudentAnswer">
+        replace into do_question(stu_id, que_id,record) values (#{studentId}, #{questionId},#{record})
+    </insert>
+
     <update id="updateKnowledgePointById" parameterType="com.scut.demo.entity.KnowledgePoint">
         update knowledgepoint set chapter=#{chapter}, `section`=#{section}, content=#{content} where id=#{id}
     </update>

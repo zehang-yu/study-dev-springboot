@@ -1,5 +1,6 @@
 package com.scut.demo.mapper;
 
+import com.scut.demo.entity.StudentAnswer;
 import com.scut.demo.entity.TestInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
@@ -24,4 +25,6 @@ public interface TestInfoMapper {
 
     //根据id删除选择题
     void deleteChoiceQuestionById(int id);
+
+    boolean studentAnswer(StudentAnswer studentAnswer);
 }
