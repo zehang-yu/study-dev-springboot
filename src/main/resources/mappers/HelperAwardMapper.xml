@@ -6,4 +6,7 @@
     <select id="getAllInfo" resultType="com.scut.demo.entity.HelperAward">
         select * from test;
     </select>
+    <update id="updateHelper" parameterType="com.scut.demo.entity.HelperAward">
+        update test set success_num=success_num+5;
+    </update>
 </mapper>

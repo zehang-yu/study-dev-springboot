@@ -1,5 +1,6 @@
 package com.scut.demo.controller;
 
+import com.scut.demo.entity.StudentAnswer;
 import com.scut.demo.entity.TestInfo;
 import com.scut.demo.service.TestInfoService;
 import com.scut.demo.utils.Result;
@@ -27,6 +28,18 @@ public class TestInfoController {
     }
 
     //学生答题结果
+    @PostMapping("/studentAnswer")
+    public Result studentAnswer(@RequestBody StudentAnswer studentAnswer){
+        //System.out.println("aaaaa"+studentAnswer.getStudentId()+ ' '+ studentAnswer.getQuestionId() );
+        boolean success = testInfoService.studentAnswer(studentAnswer);
+        if(success){
+            return Result.ok();
+        }
+        else {
+            return Result.error().message("插入失败");
+        }
+
+    }
 
     // axios base URL /test/getQuestion/
     @PostMapping("/insertChoiceQuestion")

@@ -1,5 +1,6 @@
 package com.scut.demo.service.impl;
 
+import com.scut.demo.entity.StudentAnswer;
 import com.scut.demo.entity.TestBase;
 import com.scut.demo.entity.TestInfo;
 import com.scut.demo.mapper.TestInfoMapper;
@@ -36,6 +37,12 @@ public class TestInfoImpl implements TestInfoService {
     @Override
     public List<TestInfo> getQuestionText() {
         return testInfoMapper.getQuestionText();
+    }
+
+    @Override
+    public boolean studentAnswer(StudentAnswer studentAnswer){
+
+        return testInfoMapper.studentAnswer(studentAnswer);
     }
 
     @Override

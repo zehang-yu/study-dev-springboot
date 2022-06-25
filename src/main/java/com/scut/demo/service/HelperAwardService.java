@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface HelperAwardService {
     //根據id修改助教獎勵信息
-    boolean updateHelper(int id);
+    boolean updateHelper(HelperAward helperAward);
 
     List<HelperAward> getAllInfo();
 }
