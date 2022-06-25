@@ -12,5 +12,5 @@ public interface HelperAwardMapper {
     //獲取父表記錄
     List<HelperAward> getAllInfo();
 
-    boolean updateHelper(int id);
+    boolean updateHelper(HelperAward helperAward);
 }
