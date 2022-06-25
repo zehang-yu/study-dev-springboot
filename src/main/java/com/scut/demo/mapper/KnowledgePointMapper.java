@@ -9,6 +9,8 @@ import java.util.List;
 @Mapper
 @Repository
 public interface KnowledgePointMapper {
+    // 获取所有知识点
+    List<KnowledgePoint> queryAllKnowledgePoints();
     // 添加知识点
     boolean insertKnowledgePoint(KnowledgePoint knowledgePoint);
     // 根据id修改知识点
