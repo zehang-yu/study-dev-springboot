@@ -9,6 +9,8 @@ import com.scut.demo.service.TestBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class JudgeTestImpl implements JudgeTestService {
     @Autowired
@@ -30,6 +32,9 @@ public class JudgeTestImpl implements JudgeTestService {
         judgeTest.setJudgeQueid(test_id);
         return judgeTestMapper.insertJudgeQuestion(judgeTest);
     }
+
+    @Override
+    public List<JudgeTest> getJudgeText() { return judgeTestMapper.getJudgeText();}
 
     @Override
     public JudgeTest getJudgeTestById(int id) {

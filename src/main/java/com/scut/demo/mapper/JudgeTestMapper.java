@@ -4,6 +4,8 @@ import com.scut.demo.entity.JudgeTest;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface JudgeTestMapper {
@@ -15,4 +17,6 @@ public interface JudgeTestMapper {
 
     //根据id删除判断题
     void deleteJudgeTestById(int id);
+
+    List<JudgeTest> getJudgeText();
 }
