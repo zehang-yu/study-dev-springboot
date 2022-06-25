@@ -32,8 +32,8 @@
 <!--        select * from test where test_id=#{id}-->
 <!--    </select>-->
 
-    <select id="getQuestionTextById" resultType="com.scut.demo.entity.TestInfo">
-        select * from choicequestion where choice_queid=#{id}
+    <select id="getQuestionText" resultType="com.scut.demo.entity.TestInfo">
+        select * from choicequestion
     </select>
 
     <select id="getQuestionIds" resultType="com.scut.demo.entity.TestInfo">

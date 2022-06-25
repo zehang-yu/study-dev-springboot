@@ -8,6 +8,8 @@ import com.scut.demo.service.TestInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TestInfoImpl implements TestInfoService {
 
@@ -32,21 +34,8 @@ public class TestInfoImpl implements TestInfoService {
     }
 
     @Override
-    public TestInfo getQuestionTextById(int id) {
-        return testInfoMapper.getQuestionTextById(id);
-    }
-
-    @Override
-    public int[] getQuestionIDs() { return testInfoMapper.getQuestionIDs();}
-
-    @Override
-    public String getOptionTextById(int id) {
-        return testInfoMapper.getOptionTextById(id);
-    }
-
-    @Override
-    public String getCorrectOptionAById(int id) {
-        return testInfoMapper.getCorrectOptionAById(id);
+    public List<TestInfo> getQuestionText() {
+        return testInfoMapper.getQuestionText();
     }
 
     @Override

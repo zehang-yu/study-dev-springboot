@@ -7,6 +7,8 @@ import com.scut.demo.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/judgeTest")
 public class JudgeTestController {
@@ -19,6 +21,12 @@ public class JudgeTestController {
         System.out.println(judgeTest.getJudgeQueid());
         //System.out.println(testInfo.getTest_name());
         return Result.ok().put("成功获取判断题",judgeTest);
+    }
+    @GetMapping("/get")
+    public Result getJudgeText(){
+        List<JudgeTest> judgeText= judgeTestService.getJudgeText();
+        //System.out.println(testInfo.getTestename());
+        return Result.ok().put("judgeText",judgeText);
     }
 
     @PostMapping("/insert")

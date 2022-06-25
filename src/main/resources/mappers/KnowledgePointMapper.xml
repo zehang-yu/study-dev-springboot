@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scut.demo.mapper.KnowledgePointMapper">
+    <select id="queryAllKnowledgePoints" resultType="com.scut.demo.entity.KnowledgePoint">
+        select * from knowledgepoint
+    </select>
     <insert id="insertKnowledgePoint" parameterType="com.scut.demo.entity.KnowledgePoint">
         insert into knowledgepoint(content, `section`, chapter) values (#{content}, #{section}, #{chapter})
     </insert>
