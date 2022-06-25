@@ -3,18 +3,16 @@ package com.scut.demo.service;
 import com.scut.demo.entity.TestInfo;
 import com.scut.demo.mapper.TestInfoMapper;
 
+import java.util.List;
+
 public interface TestInfoService {
     //增加选择题
     boolean insertChoiceQuestion(TestInfo testInfo);
 
     //获取问题文本
-    TestInfo getQuestionTextById(int id);
-    //获取所有的问题id
-    int[] getQuestionIDs();
-    //获取选项文本
-    String getOptionTextById(int id);
-    //获取正确答案
-    String getCorrectOptionAById(int id);
-    //根据id删除选择题
+    List<TestInfo> getQuestionText();
+
     void deleteChoiceQuestionById(int id);
+
+
 }

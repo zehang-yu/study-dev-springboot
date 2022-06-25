@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface TestInfoMapper {
@@ -17,14 +19,9 @@ public interface TestInfoMapper {
             @Result(column = "test_name", property = "name")
     })
 
-    //获取全部问题id
-    int[] getQuestionIDs();
+    //获取全部问题
+    List<TestInfo> getQuestionText();
 
-    TestInfo getQuestionTextById(int id);
-    //获取选项文本
-    String getOptionTextById(int id);
-    //获取正确答案
-    String getCorrectOptionAById(int id);
     //根据id删除选择题
     void deleteChoiceQuestionById(int id);
 }
