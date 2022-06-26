@@ -19,8 +19,6 @@ public class JudgeTestController {
     @GetMapping("/get/{id}")
     public Result getJudgeTestById(@PathVariable int id){
         JudgeTest judgeTest = judgeTestService.getJudgeTestById(id);
-        System.out.println(judgeTest.getJudgeQueid());
-        //System.out.println(testInfo.getTest_name());
         return Result.ok().put("成功获取判断题",judgeTest);
     }
     @GetMapping("/get")

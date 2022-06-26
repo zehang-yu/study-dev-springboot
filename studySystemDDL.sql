@@ -42,7 +42,7 @@ create table judgequestion
 	);
 
 create table student
-	(stu_id		int auto_increment not null,
+	(stu_id		int,
 	 name 		varchar(22),
 	 point		int,  /*积分*/
 	 grade    int,
@@ -52,7 +52,7 @@ create table student
 	);
 
 create table teacher
-(teacher_id		int auto_increment not null,
+(teacher_id		int,
  name 		varchar(22),
  account    varchar(22),
  password   varchar(22),
