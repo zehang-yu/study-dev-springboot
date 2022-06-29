@@ -1,13 +1,76 @@
 package com.scut.demo.entity;
 
+
 public class HelperAward {
 
-    public HelperAward(int id,String name, String point_type, int success_num, int defeat_num, int award) {
-        this.stu_id=id;
-        this.name = name;
-        this.point_type = point_type;
-        this.success_num = success_num;
-        this.defeat_num = defeat_num;
+    public HelperAward(int kp_id, int que_id, int success_time, int fail_time, int stu_id) {
+        this.kp_id = kp_id;
+        this.que_id = que_id;
+        this.success_time = success_time;
+        this.fail_time = fail_time;
+        this.stu_id=stu_id;
+    }
+//
+//    public HelperAward(int stu_id, int kp_id, int que_id, int success_time, int fail_time, int award) {
+//        this.stu_id = stu_id;
+//        this.kp_id = kp_id;
+//        this.que_id = que_id;
+//        this.success_time = success_time;
+//        this.fail_time = fail_time;
+//    }
+//
+//    public HelperAward(int stu_id, int que_id, int success_time, int fail_time) {
+//        this.que_id = que_id;
+//        this.success_time = success_time;
+//        this.fail_time = fail_time;
+//        this.stu_id = stu_id;
+//    }
+
+    public int getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(int teacher_id) {
+        this.teacher_id = teacher_id;
+    }
+
+    public int getKp_id() {
+        return kp_id;
+    }
+
+    public void setKp_id(int kp_id) {
+        this.kp_id = kp_id;
+    }
+
+    public int getQue_id() {
+        return que_id;
+    }
+
+    public void setQue_id(int que_id) {
+        this.que_id = que_id;
+    }
+
+    public int getSuccess_time() {
+        return success_time;
+    }
+
+    public void setSuccess_time(int success_time) {
+        this.success_time = success_time;
+    }
+
+    public int getFail_time() {
+        return fail_time;
+    }
+
+    public void setFail_time(int fail_time) {
+        this.fail_time = fail_time;
+    }
+
+    public int isAward() {
+        return award;
+    }
+
+    public void setAward(int award) {
         this.award = award;
     }
 
@@ -19,50 +82,12 @@ public class HelperAward {
         this.stu_id = stu_id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPoint_type() {
-        return point_type;
-    }
-
-    public void setPoint_type(String point_type) {
-        this.point_type = point_type;
-    }
-
-    public int getSuccess_num() {
-        return success_num;
-    }
-
-    public void setSuccess_num(int success_num) {
-        this.success_num = success_num;
-    }
-
-    public int getDefeat_num() {
-        return defeat_num;
-    }
-
-    public void setDefeat_num(int defeat_num) {
-        this.defeat_num = defeat_num;
-    }
-
-    public int isAward() {
-        return award;
-    }
-
-    public void setAward(int award) {
-        this.award = award;
-    }
+    int teacher_id;
+    int kp_id;
+    int que_id;
+    int success_time;
+    int fail_time;
+    int award;
 
     int stu_id;
-    String name ;
-    String point_type;
-    int success_num;
-    int defeat_num;
-    int award;
 }

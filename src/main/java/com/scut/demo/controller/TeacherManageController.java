@@ -16,7 +16,7 @@ public class TeacherManageController {
     private TeacherManageService teacherManageService;
 
     @GetMapping("/getStudentCuoTi/{id}")
-    public Result getStudentCuoTi(@PathVariable("id") Integer Stu_id){
+    public Result getStudentCuoTi(@PathVariable("id") int Stu_id){
         return Result.ok().put("CuoTiList",this.teacherManageService.getCuoTiByStuID(Stu_id));
     }
 

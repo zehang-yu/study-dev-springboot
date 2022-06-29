@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface HelperAwardMapper {
     //獲取父表記錄
-    List<HelperAward> getAllInfo();
+    List<HelperAward> getAllInfo(int id);
 
     boolean updateHelper(HelperAward helperAward);
 }

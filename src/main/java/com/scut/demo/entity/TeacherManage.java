@@ -9,7 +9,34 @@ public class TeacherManage {
 
     String Stu_name;
     String Q_title;
-    List<String> zhuJiao_name;
+    List<String> ZhuJiao_name;
+
+    public TeacherManage() {
+    }
+
+    public TeacherManage(int stu_id, int q_id, String stu_name, String q_title, List<String> zhuJiao_name) {
+        Stu_id = stu_id;
+        Q_id = q_id;
+        Stu_name = stu_name;
+        Q_title = q_title;
+        ZhuJiao_name = zhuJiao_name;
+    }
+
+    public int getStu_id() {
+        return Stu_id;
+    }
+
+    public void setStu_id(int stu_id) {
+        Stu_id = stu_id;
+    }
+
+    public int getQ_id() {
+        return Q_id;
+    }
+
+    public void setQ_id(int q_id) {
+        Q_id = q_id;
+    }
 
     public String getStu_name() {
         return Stu_name;
@@ -27,38 +54,11 @@ public class TeacherManage {
         Q_title = q_title;
     }
 
-    public TeacherManage() {
+    public List<String> getZhuJiao_name() {
+        return ZhuJiao_name;
     }
 
-    public TeacherManage(int stu_id, int q_id, String stu_name, String q_title, List<String> zhuJiao_name) {
-        Stu_id = stu_id;
-        Q_id = q_id;
-        Stu_name = stu_name;
-        Q_title = q_title;
-        zhuJiao_name = zhuJiao_name;
-    }
-
-    public int getStu_id() {
-        return Stu_id;
-    }
-
-    public int getQ_id() {
-        return Q_id;
-    }
-
-    public List<String> getzhuJiao_name() {
-        return zhuJiao_name;
-    }
-
-    public void setStu_id(int stu_id) {
-        Stu_id = stu_id;
-    }
-
-    public void setQ_id(int q_id) {
-        Q_id = q_id;
-    }
-
-    public void setzhuJiao_name(List<String> zhuJiao_name) {
-        zhuJiao_name = zhuJiao_name;
+    public void setZhuJiao_name(List<String> zhuJiao_name) {
+        ZhuJiao_name = zhuJiao_name;
     }
 }

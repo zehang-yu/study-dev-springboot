@@ -20,7 +20,7 @@ public class HelperAwardImpl implements HelperAwardService {
     }
 
     @Override
-    public List<HelperAward> getAllInfo() {
-        return helperAwardMapper.getAllInfo();
+    public List<HelperAward> getAllInfo(int id) {
+        return helperAwardMapper.getAllInfo(id);
     }
 }
