@@ -29,7 +29,7 @@ public class TeacherManageImpl implements TeacherManageService {
 
     @Override
     public List<TeacherManage> getCuoTiByStuID(Integer stu_id) {
-        String sql = "SELECT * FROM do_question NATURAL JOIN question NATURAL JOIN student WHERE stu_id=? AND record=1;";
+        String sql = "SELECT * FROM do_question NATURAL JOIN question NATURAL JOIN student WHERE stu_id=? AND record=0;";
         List result=new ArrayList<TeacherManage>();
         try {
             Connection connection = dataSource.getConnection();
@@ -42,7 +42,7 @@ public class TeacherManageImpl implements TeacherManageService {
                 String s_name=resultSet.getString("name");
                 String q_title=resultSet.getString("title");
                 System.out.print(s_name);
-                String sql2="SELECT * FROM do_question NATURAL JOIN student WHERE record=0 AND que_id=?";
+                String sql2="SELECT * FROM do_question NATURAL JOIN student WHERE record=1 AND que_id=?";
                 Connection connection2 = dataSource.getConnection();
                 PreparedStatement preparedStatement2 = connection2.prepareStatement(sql2);
                 preparedStatement2.setInt(1,q_id);

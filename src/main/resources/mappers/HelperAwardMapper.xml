@@ -4,9 +4,9 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.scut.demo.mapper.HelperAwardMapper">
     <select id="getAllInfo" resultType="com.scut.demo.entity.HelperAward">
-        select kp_id,que_id,success_time,fail_time,stu_id from solve_question natural join knowledgepoint_question natural join teach natural join teacher where account=#{id};
+        select kp_id,que_id,success_time,fail_time,stu_id from solve_question natural join knowledgepoint_question natural join teach natural join teacher where teacher_id=#{id};
     </select>
     <update id="updateHelper" parameterType="com.scut.demo.entity.HelperAward">
-        update solve_question natural join knowledgepoint_question natural join teach natural join teacher set fail_time=fail_time+1 where account=#{id};
+        update solve_question natural join knowledgepoint_question natural join teach natural join teacher set fail_time=fail_time+1 where que_id=#{que_id};
     </update>
 </mapper>

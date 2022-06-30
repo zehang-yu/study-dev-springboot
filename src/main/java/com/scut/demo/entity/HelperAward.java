@@ -10,6 +10,7 @@ public class HelperAward {
         this.fail_time = fail_time;
         this.stu_id=stu_id;
     }
+
 //
 //    public HelperAward(int stu_id, int kp_id, int que_id, int success_time, int fail_time, int award) {
 //        this.stu_id = stu_id;
